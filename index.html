@@ -3,97 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futurio Tech | Designer Toys & Art Figures Collectibles</title>
+    <title>Futurio Tech | Private Art Toy & Collectible Gallery</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&family=Inter:wght@400;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, .brand-font { font-family: 'JetBrains Mono', monospace; }
-        .product-card img { transition: transform 0.3s ease-out; }
-        .product-card:hover img { transform: scale(1.03); }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; }
     </style>
 </head>
-<body class="bg-zinc-50 text-zinc-900 antialiased">
+<body class="text-slate-900">
 
-    <nav class="bg-white border-b border-zinc-200 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-lg font-black tracking-tighter text-zinc-900 brand-font uppercase">Futurio Tech.</div>
-            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-zinc-500 brand-font">
-                <a href="#collection" class="hover:text-blue-600 transition text-blue-600">Figures</a>
-                <a href="#about" class="hover:text-blue-600 transition">Authenticity</a>
-                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
-            </div>
+    <nav class="border-b border-slate-100 px-6 py-4 flex justify-between items-center sticky top-0 bg-white/90 backdrop-blur-md z-50">
+        <div class="text-xl font-extrabold tracking-tighter uppercase">Futurio Tech.</div>
+        <div class="space-x-6 text-[11px] font-bold uppercase tracking-widest text-slate-400">
+            <a href="#items" class="hover:text-black">Collection</a>
+            <a href="#info" class="hover:text-black">Shipping</a>
         </div>
     </nav>
 
-    <header class="py-20 px-6 bg-white border-b border-zinc-100">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">Authentic Designer Toys & Collectibles.</h1>
-            <p class="text-lg text-zinc-500 mb-8 leading-relaxed max-w-2xl font-medium border-l-4 border-blue-600 pl-4">Curated art figures and limited edition vinyls. Sourced directly and shipped globally from our Hong Kong warehouse.</p>
-        </div>
+    <header class="py-16 px-6 text-center">
+        <h1 class="text-4xl font-extrabold mb-4 tracking-tight">Private Toy Collection.</h1>
+        <p class="text-slate-500 max-w-lg mx-auto text-sm leading-relaxed">Hand-picked designer toys and artisanal wooden instruments. Sourced across Asia, curated in Hong Kong.</p>
     </header>
 
-    <section id="collection" class="max-w-7xl mx-auto py-16 px-6">
-        <h2 class="text-2xl font-black brand-font mb-12 uppercase tracking-tight">Current Drops</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-            
-            <div class="product-card group cursor-pointer">
-                <div class="aspect-square bg-zinc-100 rounded-xl overflow-hidden mb-6 border border-zinc-200 relative">
-                    <img src="./1.jpg" alt="Collectible Figure 01" class="w-full h-full object-cover">
-                    <div class="absolute top-4 right-4 bg-blue-600 text-white text-[10px] font-bold px-2 py-1 uppercase brand-font">In Stock</div>
-                </div>
-                <h3 class="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-2 brand-font">Vinyl Art Toy</h3>
-                <h4 class="text-lg font-bold mb-2">Series 1 Collectible Figure</h4>
-                <p class="text-xl font-black text-blue-600 brand-font">60.00 HKD</p>
+    <section id="items" class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6 pb-20">
+        <div class="group">
+            <div class="aspect-square bg-slate-50 rounded-2xl overflow-hidden mb-4 border border-slate-100">
+                <img src="./1.jpg" alt="Miniature Pegasus" class="w-full h-full object-cover">
             </div>
+            <h3 class="font-bold text-lg">Crystal Pegasus Miniature</h3>
+            <p class="text-slate-400 text-xs mb-2">Translucent Designer Series</p>
+            <p class="font-black text-blue-600">60.00 HKD</p>
+        </div>
 
-            <div class="product-card group cursor-pointer">
-                <div class="aspect-square bg-zinc-100 rounded-xl overflow-hidden mb-6 border border-zinc-200 relative">
-                    <img src="./2.jpg" alt="Collectible Figure 02" class="w-full h-full object-cover">
-                    <div class="absolute top-4 right-4 bg-blue-600 text-white text-[10px] font-bold px-2 py-1 uppercase brand-font">Limited</div>
-                </div>
-                <h3 class="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-2 brand-font">Designer Plush/Soft</h3>
-                <h4 class="text-lg font-bold mb-2">Special Edition Character</h4>
-                <p class="text-xl font-black text-blue-600 brand-font">90.00 HKD</p>
+        <div class="group">
+            <div class="aspect-square bg-slate-50 rounded-2xl overflow-hidden mb-4 border border-slate-100">
+                <img src="./2.jpg" alt="Wooden Percussion Frog" class="w-full h-full object-cover">
             </div>
+            <h3 class="font-bold text-lg">Artisanal Percussion Frog</h3>
+            <p class="text-slate-400 text-xs mb-2">Hand-carved Rosewood Instrument</p>
+            <p class="font-black text-blue-600">90.00 HKD</p>
+        </div>
 
-            <div class="product-card group cursor-pointer">
-                <div class="aspect-square bg-zinc-100 rounded-xl overflow-hidden mb-6 border border-zinc-200 relative">
-                    <img src="./3.jpg" alt="Collectible Figure 03" class="w-full h-full object-cover">
-                    <div class="absolute top-4 right-4 bg-blue-600 text-white text-[10px] font-bold px-2 py-1 uppercase brand-font">New Arrival</div>
-                </div>
-                <h3 class="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-2 brand-font">Resin Model</h3>
-                <h4 class="text-lg font-bold mb-2">Detailed Display Model</h4>
-                <p class="text-xl font-black text-blue-600 brand-font">80.00 HKD</p>
+        <div class="group">
+            <div class="aspect-square bg-slate-50 rounded-2xl overflow-hidden mb-4 border border-slate-100">
+                <img src="./3.jpg" alt="Vintage Teddy Bear" class="w-full h-full object-cover">
             </div>
-
+            <h3 class="font-bold text-lg">Soft-Touch Teddy Collector</h3>
+            <p class="text-slate-400 text-xs mb-2">Vintage Style Plush Edition</p>
+            <p class="font-black text-blue-600">80.00 HKD</p>
         </div>
     </section>
 
-    <section id="about" class="bg-zinc-100 py-16 px-6">
-        <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-2xl border border-zinc-200 shadow-sm">
-            <h3 class="text-sm font-black uppercase tracking-widest text-zinc-400 mb-8 brand-font">About Futurio Tech Studio</h3>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                   <p class="text-sm text-zinc-600 leading-relaxed font-medium mb-4">Founded in 2026, Futurio Tech is a specialized independent retailer of designer toys and art figures based in Hong Kong.</p>
-                   <p class="text-sm text-zinc-600 leading-relaxed font-medium">We guarantee the authenticity of every piece we sell, catering to serious collectors globally.</p>
-                </div>
-                <div id="contact" class="text-sm text-zinc-600 leading-relaxed space-y-4">
-                    <p><strong class="text-zinc-900">Shipping:</strong> 48h dispatch via SF International. 7-14 days global delivery.</p>
-                    <p><strong class="text-zinc-900">Contact:</strong> info@futurio.tech</p>
-                    <p class="text-xs text-zinc-400 brand-font">VERIFIED MERCHANT - 2026</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-12 px-6 text-center bg-zinc-50 border-t border-zinc-200">
-        <div class="text-zinc-400 text-[10px] space-y-4 uppercase tracking-[0.15em] font-bold brand-font">
-            <p>&copy; 2026 FUTURIO TECH STUDIO. ALL RIGHTS RESERVED.</p>
-            <div class="flex justify-center space-x-8 pt-4">
-                <a href="#" class="hover:text-zinc-900 transition">Privacy Policy</a>
-                <a href="#" class="hover:text-zinc-900 transition">Terms of Service</a>
-            </div>
+    <footer id="info" class="bg-slate-50 py-12 px-6 border-t border-slate-100 text-center">
+        <div class="max-w-2xl mx-auto">
+            <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-6 underline">Studio Logistics</h4>
+            <p class="text-xs text-slate-500 leading-relaxed mb-8">All items are part of a private curated collection. Dispatched from Hong Kong via SF Express within 48 hours. Secure global shipping available.</p>
+            <p class="text-[10px] font-bold text-slate-300 uppercase">&copy; 2026 FUTURIO TECH STUDIO. | Contact: info@futurio.tech</p>
         </div>
     </footer>
 
