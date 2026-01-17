@@ -3,81 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futurio Tech | Artisanal Home Decor & Collectibles</title>
+    <title>Futurio Tech | Artisanal Home Decor & Studio Objects</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .hero-gradient { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .product-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .product-card:hover { transform: translateY(-8px); }
     </style>
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-[#fafafa] text-slate-900 antialiased">
 
-    <nav class="max-w-7xl mx-auto px-6 py-8 flex justify-between items-center">
-        <div class="text-2xl font-bold tracking-tighter text-blue-600">FUTURIO TECH.</div>
-        <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-500">
-            <a href="#collection" class="hover:text-blue-600 transition">Collection</a>
-            <a href="#shipping" class="hover:text-blue-600 transition">Shipping</a>
-            <a href="#about" class="hover:text-blue-600 transition">About Studio</a>
+    <nav class="bg-white/80 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="text-xl font-black tracking-tighter text-slate-900 uppercase">Futurio Tech.</div>
+            <div class="hidden md:flex space-x-10 text-[13px] font-bold uppercase tracking-widest text-slate-400">
+                <a href="#studio" class="hover:text-slate-900 transition">Studio</a>
+                <a href="#collection" class="hover:text-slate-900 transition text-slate-900 border-b-2 border-slate-900">Collection</a>
+                <a href="#contact" class="hover:text-slate-900 transition">Contact</a>
+            </div>
         </div>
     </nav>
 
-    <header class="hero-gradient py-20 px-6 border-b border-slate-100">
+    <header class="py-28 px-6 bg-white border-b border-slate-50">
         <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">Curated Collectibles for Modern Spaces.</h1>
-            <p class="text-lg text-slate-600 mb-10 leading-relaxed">Futurio Tech Studio explores the intersection of traditional craftsmanship and contemporary design. Shipping globally from our Hong Kong atelier.</p>
-            <a href="#collection" class="bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all">Browse Collection</a>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 tracking-tighter text-slate-900">Objects of Intent.</h1>
+            <p class="text-lg text-slate-500 mb-10 leading-relaxed max-w-xl mx-auto font-medium">Independent design studio focusing on tactile artisanal objects. Hand-finished and curated in our Hong Kong atelier.</p>
         </div>
     </header>
 
     <section id="collection" class="max-w-7xl mx-auto py-24 px-6">
-        <h2 class="text-3xl font-bold mb-12 text-center">Spring 2026 Collection</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div class="group cursor-pointer">
-                <div class="aspect-square bg-slate-100 rounded-2xl overflow-hidden mb-6">
-                    <img src="https://picsum.photos/seed/futurio1/800/800" alt="Decor" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            
+            <div class="product-card group cursor-pointer">
+                <div class="aspect-[3/4] bg-slate-100 rounded-2xl overflow-hidden mb-8 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1578749553376-797746408221?auto=format&fit=crop&q=80&w=800" alt="Ceramic Vase" class="w-full h-full object-cover">
                 </div>
-                <h3 class="text-xl font-bold italic">Hand-Fired Ceramic Vase</h3>
-                <p class="text-blue-600 font-bold mt-2">129.00 HKD</p>
+                <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Ceramics</h3>
+                <h4 class="text-xl font-bold mb-3">Hand-Fired Ceramic Vessel</h4>
+                <p class="text-2xl font-black text-slate-900">60.00 HKD</p>
             </div>
-            <div class="group cursor-pointer">
-                <div class="aspect-square bg-slate-100 rounded-2xl overflow-hidden mb-6">
-                    <img src="https://picsum.photos/seed/futurio2/800/800" alt="Decor" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+            <div class="product-card group cursor-pointer">
+                <div class="aspect-[3/4] bg-slate-100 rounded-2xl overflow-hidden mb-8 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&q=80&w=800" alt="Stone Sculpture" class="w-full h-full object-cover">
                 </div>
-                <h3 class="text-xl font-bold italic">Minimalist Basalt Sculpture</h3>
-                <p class="text-blue-600 font-bold mt-2">245.00 HKD</p>
+                <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Sculpture</h3>
+                <h4 class="text-xl font-bold mb-3">Minimalist Basalt Form</h4>
+                <p class="text-2xl font-black text-slate-900">90.00 HKD</p>
             </div>
-            <div class="group cursor-pointer">
-                <div class="aspect-square bg-slate-100 rounded-2xl overflow-hidden mb-6">
-                    <img src="https://picsum.photos/seed/futurio3/800/800" alt="Decor" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+            <div class="product-card group cursor-pointer">
+                <div class="aspect-[3/4] bg-slate-100 rounded-2xl overflow-hidden mb-8 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?auto=format&fit=crop&q=80&w=800" alt="Wall Art" class="w-full h-full object-cover">
                 </div>
-                <h3 class="text-xl font-bold italic">Abstract Texture Wall Panel</h3>
-                <p class="text-blue-600 font-bold mt-2">180.00 HKD</p>
+                <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Wall Art</h3>
+                <h4 class="text-xl font-bold mb-3">Textured Surface Study</h4>
+                <p class="text-2xl font-black text-slate-900">80.00 HKD</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="studio" class="bg-white py-24 px-6 border-y border-slate-100">
+        <div class="max-w-3xl mx-auto space-y-16">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h5 class="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400 mb-6">Logistics</h5>
+                    <p class="text-sm text-slate-500 leading-loose">Items are dispatched within 48 hours via HK-based global carriers. Standard delivery: 7-12 business days.</p>
+                </div>
+                <div id="contact">
+                    <h5 class="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400 mb-6">Support</h5>
+                    <p class="text-sm text-slate-500 leading-loose font-bold">Email: info@futurio.tech</p>
+                    <p class="text-sm text-slate-500 leading-loose">Service: Mon-Fri, 9:00 - 18:00 (HKT)</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="shipping" class="bg-slate-50 py-20 px-6">
-        <div class="max-w-3xl mx-auto space-y-12">
-            <div>
-                <h3 class="text-lg font-bold mb-4 uppercase tracking-widest text-slate-400">Shipping Policy</h3>
-                <p class="text-slate-600 leading-relaxed text-sm">All orders are processed within 48 hours from our HK logistics hub. We provide international trackable shipping via SF Express and DHL. Estimated delivery: 7-14 business days.</p>
-            </div>
-            <div>
-                <h3 id="about" class="text-lg font-bold mb-4 uppercase tracking-widest text-slate-400">About the Studio</h3>
-                <p class="text-slate-600 leading-relaxed text-sm">Futurio Tech is an independent design studio founded in 2026. We specialize in limited-run decorative art pieces. We are currently expanding our digital presence through eBay and this brand portal.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-12 px-6 border-t border-slate-100 text-center">
-        <div class="text-slate-400 text-[11px] space-y-2 uppercase tracking-tight">
+    <footer class="py-16 px-6 text-center">
+        <div class="text-slate-400 text-[10px] space-y-4 uppercase tracking-[0.15em] font-bold">
             <p>&copy; 2026 FUTURIO TECH STUDIO. ALL RIGHTS RESERVED.</p>
-            <p>Email: info@futurio.tech | Based in Hong Kong</p>
-            <div class="flex justify-center space-x-4 mt-4">
-                <a href="#" class="hover:text-slate-900">Privacy Policy</a>
-                <a href="#" class="hover:text-slate-900">Terms of Service</a>
-                <a href="#" class="hover:text-slate-900">Returns</a>
+            <div class="flex justify-center space-x-8 pt-4">
+                <a href="#" class="hover:text-slate-900 transition">Privacy</a>
+                <a href="#" class="hover:text-slate-900 transition">Terms</a>
+                <a href="#" class="hover:text-slate-900 transition">Shipping</a>
             </div>
         </div>
     </footer>
