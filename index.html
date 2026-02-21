@@ -1,93 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Futurio | AI Video Innovation Platform</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Futurio is building AI-powered infrastructure for automated video generation and scalable media rendering.">
+  <meta name="description" content="Futurio builds AI-native infrastructure for automated video scripting, voice, and cloud rendering pipelines." />
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      line-height: 1.6;
+    :root{
+      --bg:#070b18;
+      --card:#0b1228;
+      --muted:#a7b3d1;
+      --text:#eaf0ff;
+      --line:rgba(255,255,255,.08);
+      --brand:#6ee7ff;
+      --brand2:#a78bfa;
+      --btn:#2dd4bf;
+      --btn2:#60a5fa;
+      --shadow: 0 16px 50px rgba(0,0,0,.35);
+      --radius: 16px;
+      --max: 1040px;
     }
-    header {
-      padding: 80px 20px;
-      text-align: center;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(110,231,255,.18), transparent 55%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(167,139,250,.16), transparent 50%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
     }
-    h1 {
-      font-size: 42px;
-      margin-bottom: 20px;
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px;}
+    .nav{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(7,11,24,.6);
+      border-bottom: 1px solid var(--line);
     }
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
+    .navin{display:flex; align-items:center; justify-content:space-between; padding:14px 0;}
+    .logo{display:flex; gap:10px; align-items:center; font-weight:700; letter-spacing:.4px}
+    .dot{width:10px; height:10px; border-radius:999px; background:linear-gradient(90deg,var(--brand),var(--brand2)); box-shadow:0 0 20px rgba(110,231,255,.35)}
+    .links{display:flex; gap:18px; align-items:center; color:var(--muted); font-size:14px}
+    .links a{text-decoration:none; padding:8px 10px; border-radius:10px}
+    .links a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .cta{
+      display:inline-flex; align-items:center; gap:10px;
+      background: linear-gradient(90deg,var(--btn),var(--btn2));
+      color:#071023; font-weight:700;
+      padding:10px 14px; border-radius:12px;
+      text-decoration:none;
+      box-shadow: 0 10px 30px rgba(45,212,191,.18);
     }
-    h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid #334155;
-      padding-bottom: 10px;
+    .hero{padding:64px 0 24px;}
+    .badge{
+      display:inline-flex; gap:10px; align-items:center;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      padding:8px 12px; border-radius:999px;
+      color: var(--muted);
+      font-size:13px;
     }
-    .button {
-      display: inline-block;
-      padding: 12px 24px;
-      background: #3b82f6;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      margin-top: 20px;
+    .grid2{display:grid; grid-template-columns: 1.2fr .8fr; gap:22px; align-items:stretch}
+    @media (max-width:900px){ .grid2{grid-template-columns:1fr} .links{display:none} }
+    h1{font-size:52px; line-height:1.08; margin:18px 0 12px;}
+    @media (max-width:520px){ h1{font-size:40px;} }
+    .sub{color:var(--muted); font-size:16px; max-width:62ch}
+    .actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:20px}
+    .ghost{
+      display:inline-flex; align-items:center; gap:10px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      padding:10px 14px; border-radius:12px;
+      color:var(--text); text-decoration:none;
     }
-    footer {
-      text-align: center;
-      padding: 40px;
-      font-size: 14px;
-      color: #94a3b8;
+    .ghost:hover{background: rgba(255,255,255,.07)}
+    .panel{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
     }
+    .panel:before{
+      content:"";
+      position:absolute; inset:-80px -80px auto auto;
+      width:260px; height:260px;
+      background: radial-gradient(circle at 30% 30%, rgba(110,231,255,.18), transparent 60%);
+      transform: rotate(20deg);
+      pointer-events:none;
+    }
+    .kpis{display:grid; grid-template-columns: repeat(3, 1fr); gap:10px; margin-top:14px}
+    .kpi{border:1px solid var(--line); background: rgba(255,255,255,.03); border-radius:14px; padding:12px}
+    .kpi b{display:block; font-size:18px}
+    .kpi span{color:var(--muted); font-size:12px}
+    .section{padding:36px 0;}
+    .h2{font-size:24px; margin:0 0 8px}
+    .p{color:var(--muted); margin:0 0 14px}
+    .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+    @media (max-width:900px){ .cards{grid-template-columns:1fr} }
+    .card{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius: var(--radius);
+      padding:16px;
+    }
+    .card h3{margin:0 0 8px; font-size:16px}
+    .card p{margin:0; color:var(--muted); font-size:14px}
+    .list{margin:12px 0 0; padding-left:18px; color:var(--muted)}
+    .list li{margin:6px 0}
+    .split{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+    @media (max-width:900px){ .split{grid-template-columns:1fr} }
+    .mini{font-size:12px; color:var(--muted)}
+    .faq details{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius: 14px;
+      padding:12px 14px;
+      margin:10px 0;
+    }
+    .faq summary{cursor:pointer; font-weight:700}
+    footer{padding:34px 0; border-top:1px solid var(--line); color:var(--muted); font-size:13px}
+    .pillrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+    .pill{border:1px solid var(--line); background: rgba(255,255,255,.03); padding:8px 10px; border-radius:999px; font-size:12px; color:var(--muted)}
+    code{background: rgba(255,255,255,.06); padding:2px 6px; border-radius:8px}
   </style>
 </head>
-
 <body>
 
-<header>
-  <h1>AI Video Innovation Platform</h1>
-  <p>Build, Script, and Render Intelligent Video Content at Scale</p>
-  <a href="contact.html" class="button">Request Early Access</a>
-</header>
+  <div class="nav">
+    <div class="wrap navin">
+      <div class="logo"><span class="dot"></span> Futurio</div>
+      <div class="links">
+        <a href="#product">Product</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="cta" href="#contact">Request Early Access →</a>
+    </div>
+  </div>
 
-<section>
-  <h2>What We Are Building</h2>
-  <p>
-    Futurio is developing an AI-powered infrastructure platform designed to automate short-form educational and analytical video production. 
-    Our system integrates AI scripting engines, voice synthesis modules, and scalable cloud-based rendering pipelines.
-  </p>
-</section>
+  <div class="wrap hero">
+    <div class="grid2">
+      <div>
+        <div class="badge">AI-native video infrastructure • MVP in progress • Beta invites</div>
+        <h1>AI Video Innovation Platform</h1>
+        <p class="sub">
+          Futurio is building cloud-native infrastructure for automated video scripting, voice synthesis, and scalable rendering pipelines —
+          designed for short-form educational and analytical content.
+        </p>
+        <div class="actions">
+          <a class="cta" href="#contact">Join the Beta</a>
+          <a class="ghost" href="#architecture">See Architecture</a>
+        </div>
 
-<section>
-  <h2>Core Technology</h2>
-  <ul>
-    <li>AI Script Generation Engine</li>
-    <li>Automated Voice Synthesis</li>
-    <li>Cloud-based Video Rendering Pipeline</li>
-    <li>Containerized Backend Deployment</li>
-    <li>Scalable Media Storage & Compute Infrastructure</li>
-  </ul>
-</section>
+        <div class="pillrow">
+          <div class="pill">Automated scripting</div>
+          <div class="pill">Voice + captions</div>
+          <div class="pill">Cloud rendering</div>
+          <div class="pill">API-first</div>
+          <div class="pill">Scalable storage</div>
+        </div>
+      </div>
 
-<section>
-  <h2>Cloud-Native Architecture</h2>
-  <p>
-    Futurio is designed using modern cloud-native principles, leveraging scalable compute resources, object storage, and AI model deployment infrastructure.
-    Our platform requires high-performance backend services and GPU-enabled processing to support real-time content generation.
-  </p>
-</section>
+      <div class="panel">
+        <div style="font-weight:700; margin-bottom:6px;">Status</div>
+        <div class="mini">We are currently validating MVP workflows and cloud deployment.</div>
 
-<footer>
-  © 2026 Futurio.tech | AI Video Infrastructure Startup
-</footer>
+        <div class="kpis">
+          <div class="kpi"><b>MVP</b><span>pipeline prototyping</span></div>
+          <div class="kpi"><b>Beta</b><span>early access list</span></div>
+          <div class="kpi"><b>Infra</b><span>cloud-native stack</span></div>
+        </div>
+
+        <div style="margin-top:14px; color:var(--muted); font-size:13px;">
+          Designed to run on scalable compute, object storage, and containerized services.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap section" id="product">
+    <div class="h2">What We’re Building</div>
+    <p class="p">A modular system that turns a topic into a publish-ready short video, using an automated pipeline.</p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Script Engine</h3>
+        <p>Topic → outline → narration. Optimized for educational and analytical formats.</p>
+      </div>
+      <div class="card">
+        <h3>Voice + Captions</h3>
+        <p>Automated voice generation, subtitles, and timing alignment for short-form.</p>
+      </div>
+      <div class="card">
+        <h3>Rendering Pipeline</h3>
+        <p>Cloud-based rendering jobs with scalable compute, storage, and queue orchestration.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap section" id="architecture">
+    <div class="h2">Cloud-Native Architecture</div>
+    <p class="p">Futurio is designed with modern cloud principles for scale, reliability, and iteration speed.</p>
+
+    <div class="split">
+      <div class="card">
+        <h3>Infrastructure Needs</h3>
+        <ul class="list">
+          <li>Compute for rendering and media processing (CPU/GPU as needed)</li>
+          <li>Object storage for assets and outputs (videos, audio, captions)</li>
+          <li>Containerized backend services and APIs</li>
+          <li>Job queue / orchestration for rendering workloads</li>
+          <li>Monitoring + logs for pipeline reliability</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Why Google Cloud</h3>
+        <ul class="list">
+          <li>Scalable compute and managed services for rapid MVP iteration</li>
+          <li>Strong storage + networking for media workloads</li>
+          <li>AI/ML deployment options for model inference workflows</li>
+          <li>Cost control using quotas, budgets, and alerts</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mini" style="margin-top:10px;">
+      Example components: <code>Compute</code> • <code>Object Storage</code> • <code>Container Services</code> • <code>Queues</code> • <code>Monitoring</code>
+    </div>
+  </div>
+
+  <div class="wrap section" id="roadmap">
+    <div class="h2">Roadmap</div>
+    <p class="p">Simple, credible milestones help reviewers understand you’re real and building.</p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Phase 1 — MVP Pipeline</h3>
+        <p>End-to-end prototype: script → voice → render → export.</p>
+      </div>
+      <div class="card">
+        <h3>Phase 2 — Private Beta</h3>
+        <p>Invite early users, collect feedback, stabilize rendering reliability.</p>
+      </div>
+      <div class="card">
+        <h3>Phase 3 — API + Scale</h3>
+        <p>API-first workflow, job orchestration, cost controls, and monitoring.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap section faq" id="faq">
+    <div class="h2">FAQ</div>
+
+    <details>
+      <summary>Is Futurio a content agency?</summary>
+      <div class="mini" style="margin-top:8px;">
+        No. Futurio is a product-focused startup building AI-native infrastructure and tools for automated video generation.
+      </div>
+    </details>
+
+    <details>
+      <summary>Do you need cloud credits?</summary>
+      <div class="mini" style="margin-top:8px;">
+        Yes. Our pipeline requires scalable compute and storage for media processing and rendering workloads, especially during MVP iteration.
+      </div>
+    </details>
+
+    <details>
+      <summary>How do you control costs?</summary>
+      <div class="mini" style="margin-top:8px;">
+        We plan to use budgets, alerts, quotas, and staged rollouts to keep usage within limits during early development.
+      </div>
+    </details>
+  </div>
+
+  <div class="wrap section" id="contact">
+    <div class="h2">Contact</div>
+    <p class="p">Interested in early access or partnership? Reach out:</p>
+    <div class="card">
+      <div style="font-weight:700;">Email</div>
+      <div class="mini" style="margin-top:6px;">founder@futurio.tech</div>
+      <div class="mini" style="margin-top:10px;">
+        (Tip: use a domain email like this for Google Cloud Startup applications.)
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      © 2026 Futurio.tech — AI Video Infrastructure Startup • Built with static HTML
+    </div>
+  </footer>
 
 </body>
 </html>
