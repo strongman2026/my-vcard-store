@@ -6,103 +6,153 @@
   <title>Futurio | AI Video Infrastructure Platform</title>
   <meta name="description" content="Cloud-native tools for automated video scripting, voice synthesis, and scalable rendering." />
   <style>
-    :root{
-      --brand1:#00c6a7;
-      --brand2:#0b66ff;
-      --bg:#f6f8f9;
-      --text:#0b1220;
-      --muted:#5b667a;
-      --card:#ffffff;
-      --line:rgba(15,23,42,.10);
-      --shadow:0 14px 40px rgba(0,0,0,.08);
-      --r:18px;
+    :root {
+      --brand1: #00c6a7;
+      --brand2: #0b66ff;
+      --bg: #f6f8f9;
+      --text: #0b1220;
+      --muted: #5b667a;
+      --card: #ffffff;
+      --line: rgba(15, 23, 42, .10);
+      --shadow: 0 14px 40px rgba(0, 0, 0, .08);
+      --r: 18px;
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-    a{color:inherit;text-decoration:none}
-    .nav{
-      position:sticky;top:0;z-index:10;
-      background:#ffffffcc;backdrop-filter:blur(10px);
-      border-bottom:1px solid var(--line);
+    * {box-sizing: border-box;}
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
-    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-    .navin{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .logo{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.3px}
-    .dot{width:12px;height:12px;border-radius:999px;background:linear-gradient(90deg,var(--brand1),var(--brand2))}
-    .links{display:flex;gap:14px;align-items:center;color:var(--muted);font-size:14px}
-    .links a{padding:8px 10px;border-radius:12px}
-    .links a:hover{background:rgba(0,0,0,.04);color:var(--text)}
-    .hero{
-      background:linear-gradient(135deg,var(--brand1),var(--brand2));
-      color:#fff;
-      padding:100px 40px;
-      overflow:hidden;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
-    .hero-wrap{
-      max-width:1300px;
-      margin:auto;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #ffffffcc;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
     }
-    .hero-left{
-      max-width:600px;
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
-    .hero h1{
-      font-size:56px;
-      margin:0 0 20px;
-      line-height:1.1;
+    .navin {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
     }
-    .hero p{
-      font-size:20px;
-      opacity:.95;
+    .logo {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-weight: 800;
+      letter-spacing: .3px;
     }
-    .buttons{
-      margin-top:35px;
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--brand1), var(--brand2));
     }
-    .btn{
-      padding:16px 32px;
-      border-radius:40px;
-      font-weight:bold;
-      text-decoration:none;
-      display:inline-block;
-      margin-right:14px;
+    .links {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 14px;
     }
-    .primary{
-      background:white;
-      color:#0b66ff;
+    .links a {
+      padding: 8px 10px;
+      border-radius: 12px;
     }
-    .secondary{
-      border:2px solid white;
-      color:white;
+    .links a:hover {
+      background: rgba(0, 0, 0, .04);
+      color: var(--text);
     }
-
-    /* 🔥 图片增强部分 */
-    .hero-right img{
-      width:520px;
-      max-width:100%;
-      transform:translateX(40px);
-      filter:drop-shadow(0 25px 40px rgba(0,0,0,.35));
-      transition:all .4s ease;
+    .hero {
+      background: linear-gradient(135deg, var(--brand1), var(--brand2));
+      color: #fff;
+      padding: 120px 40px;
+      overflow: hidden;
     }
-
-    .hero-right img:hover{
-      transform:translateX(40px) scale(1.05);
+    .hero-container {
+      max-width: 1400px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-
-    .section{
-      padding:70px 40px;
-      text-align:center;
+    .hero-left {
+      max-width: 600px;
     }
-
-    footer{
-      padding:30px;
-      text-align:center;
-      background:#eee;
+    .hero h1 {
+      font-size: 64px;
+      line-height: 1.1;
+      margin-bottom: 20px;
     }
-
-    .footer-link{color:var(--muted);text-decoration:none;font-size:12px;margin-top:16px;}
-    .footer-link:hover{color:var(--text);}
+    .hero p {
+      font-size: 20px;
+      opacity: .95;
+    }
+    .hero-buttons {
+      margin-top: 40px;
+    }
+    .btn {
+      padding: 18px 36px;
+      border-radius: 40px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin-right: 16px;
+    }
+    .primary {
+      background: white;
+      color: #0b66ff;
+    }
+    .secondary {
+      border: 2px solid white;
+      color: white;
+    }
+    .hero-right {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .hero-right img {
+      width: 720px; /* 🔥 关键：大图 */
+      max-width: 100%;
+      transform: translateX(60px);
+      filter: drop-shadow(0 35px 60px rgba(0, 0, 0, .35));
+      transition: 0.4s ease;
+    }
+    .hero-right img:hover {
+      transform: translateX(60px) scale(1.05);
+    }
+    .section {
+      padding: 70px 40px;
+      text-align: center;
+    }
+    footer {
+      padding: 30px;
+      text-align: center;
+      background: #eee;
+    }
+    .footer-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 12px;
+      margin-top: 16px;
+    }
+    .footer-link:hover {
+      color: var(--text);
+    }
   </style>
 </head>
 
@@ -120,11 +170,14 @@
   </div>
 
   <header class="hero">
-    <div class="wrap hero-wrap">
+    <div class="hero-container">
       <div class="hero-left">
         <h1>AI Video Infrastructure Platform</h1>
-        <p>Cloud-native tools for automated video scripting, voice synthesis, and scalable rendering.</p>
-        <div class="buttons">
+        <p>
+          Cloud-native tools for automated video scripting,
+          voice synthesis, and scalable rendering.
+        </p>
+        <div class="hero-buttons">
           <a class="btn primary" href="request.html">Request Early Access</a>
           <a class="btn secondary" href="learn.html">Learn More</a>
         </div>
