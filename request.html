@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Futurio | Request Early Access</title>
+  <style>
+    :root{
+      --bg:#f6f8fb; --text:#0b1220; --muted:#5b667a;
+      --brand1:#00c6a7; --brand2:#0b66ff;
+      --card:#fff; --line:rgba(15,23,42,.10);
+      --shadow:0 14px 40px rgba(0,0,0,.08); --r:18px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:900px;margin:0 auto;padding:0 20px}
+    .top{background:linear-gradient(135deg,var(--brand1),var(--brand2));color:#fff;padding:40px 0}
+    .nav{display:flex;justify-content:space-between;align-items:center}
+    .logo{font-weight:800;letter-spacing:.3px}
+    .links{display:flex;gap:14px;align-items:center;color:rgba(255,255,255,.92);font-size:14px}
+    .links a{padding:8px 10px;border-radius:12px}
+    .links a:hover{background:rgba(255,255,255,.12)}
+    .section{padding:56px 0}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:22px}
+    .muted{color:var(--muted)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:14px 22px;border-radius:999px;font-weight:800;
+      background:linear-gradient(135deg,var(--brand1),var(--brand2));
+      color:#fff;border:0;cursor:pointer;
+    }
+    input{
+      width:100%;padding:14px 14px;border-radius:14px;border:1px solid var(--line);
+      font-size:16px;
+    }
+    footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+    @media(max-width:900px){.links{display:none}}
+  </style>
+</head>
+<body>
+
+  <div class="top">
+    <div class="wrap">
+      <div class="nav">
+        <div class="logo">FUTURIO TECH</div>
+        <div class="links">
+          <a href="index.html">Home</a>
+          <a href="learn.html">Learn</a>
+        </div>
+      </div>
+      <h1 style="margin:18px 0 0;font-size:34px">Request Early Access</h1>
+      <div style="opacity:.92;margin-top:6px">Join our private beta list</div>
+    </div>
+  </div>
+
+  <main class="section">
+    <div class="wrap">
+      <div class="card">
+        <h2 style="margin:0 0 10px">Get invited to the beta</h2>
+        <p class="muted" style="margin:0 0 16px">
+          Leave your email and we’ll reach out when early access opens.
+        </p>
+
+        <!-- Option 1: mailto (no backend needed) -->
+        <div style="display:grid;gap:12px;max-width:520px">
+          <input id="email" type="email" placeholder="you@example.com" />
+          <button class="btn" type="button" onclick="joinBeta()">Join Beta</button>
+          <div class="muted" style="font-size:13px">
+            Or email us directly: <a href="mailto:founder@futurio.tech">founder@futurio.tech</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Futurio.tech — AI Video Infrastructure Startup</div>
+  </footer>
+
+<script>
+function joinBeta(){
+  const v = document.getElementById('email').value.trim();
+  const subject = encodeURIComponent('Futurio Beta Access Request');
+  const body = encodeURIComponent('Hi Futurio team,\n\nPlease add me to the early access list.\n\nEmail: ' + v + '\n\nThanks!');
+  window.location.href = 'mailto:founder@futurio.tech?subject=' + subject + '&body=' + body;
+}
+</script>
+</body>
+</html>
